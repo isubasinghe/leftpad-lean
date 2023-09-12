@@ -22,17 +22,6 @@ theorem drop_leftpad_eq_orig (l: List α) (a: α) (n: Nat): drop (leftpad l a n)
     rw [<-iz]
     rfl
 
-theorem take_repl_eq_repl (a: α) (n: Nat): (List.replicate n a).take n = List.replicate n a := by
-  induction n with 
-  | zero => 
-    simp
-    rw [List.take]
-  | succ z iz => 
-    rw [<-Nat.add_one]
-    simp [List.take]
-    rw [iz]
-
-
 theorem take_leftpad_eq_padded (l: List α) (a: α) (n: Nat):(leftpad l a n).take n = List.replicate n a := by
 induction n with
 | zero =>
