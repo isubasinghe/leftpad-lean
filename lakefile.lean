@@ -1,6 +1,5 @@
 import Lake
 open Lake DSL
-require aesop from git "https://github.com/JLimperg/aesop"
 package «leftpad» {
   -- add package configuration options here
 }
